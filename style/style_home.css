@@ -1,4 +1,4 @@
-#header_home{
+#header_home {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,10 +19,10 @@ main {
 }
 
 
-#imgmain{
+#imgmain {
     width: 100%;
     height: 100%;
-    position: relative; 
+    position: relative;
     z-index: 1;
     filter: brightness(40%);
 }
@@ -37,20 +37,22 @@ main {
 }
 
 .last_word {
-    color: #b2dfb0; 
+    color: #b2dfb0;
 }
 
-#boxmain{
+#boxmain {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 5% 5% 5% 5%;
-    justify-content:space-evenly;
+    margin: 0% 5% 0% 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
 }
 
 
 
-#box_news{
+#box_news {
     width: 80%;
 }
 
@@ -66,10 +68,10 @@ main {
 
 .news {
     position: relative;
-    width: 320px; 
-    height: 200px; 
-    overflow: hidden; 
-    transition: height 0.5s; 
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    transition: height 0.5s;
 }
 
 .news img {
@@ -83,7 +85,7 @@ main {
 }
 
 .news .text {
-    position: absolute; 
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 20px;
@@ -94,7 +96,7 @@ main {
     z-index: 1;
 }
 
-.news p{
+.news p {
     display: none;
 }
 
@@ -111,40 +113,40 @@ main {
     display: block;
 }
 
-#news05{
+#news05 {
     width: 645px;
 }
 
 
 
 
-.games{
+.games {
     margin-top: 10px;
     background-color: rgba(69, 69, 69, 0.449);
     border-radius: 10px;
     height: 450px;
-    color:white;
+    color: white;
     width: 22%;
 }
 
-.games h3{
+.games h3 {
     text-align: center;
 }
 
-.img_jg{
+.img_jg {
     width: 60px;
     height: 60px;
     border-radius: 100px;
 }
 
-.img_jg img{
+.img_jg img {
     border-radius: 100px;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.games table{
+.games table {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -152,6 +154,6 @@ main {
     border-collapse: collapse;
 }
 
-.games table tr td{
+.games table tr td {
     padding: 5px;
 }
