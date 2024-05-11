@@ -1,0 +1,176 @@
+
+
+#gif_inicial{
+    width: 100%;
+    padding: 0 10%;
+    display:flex ;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content:space-between;
+    margin: 0 10%;
+}
+
+#h1dicas {
+    margin: 1% 0;
+}
+
+#cabecalho button {
+    margin: 1% 0; 
+    border: 0;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+main{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2% 0 2%;
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 30px;
+}
+
+main a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.dicas{
+    width: 350px;
+    height: 200px;
+}
+
+.img_dica{
+    width: 350px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: border-radius 0.5s ease, border 0.5s ease;
+}
+
+.img_dica img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+footer{
+    margin-top: 5%;
+}
+
+.img_dica:hover{
+    border: solid 1px #b2dfb0;
+    border-radius: 0%;
+}
+
+.img_dica:hover img {
+    filter: brightness(70%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nota {
+    color: white;
+    font-size: 18px;
+}
+
+.img_dica:hover .overlay {
+    opacity: 1;
+}
+
+.text_dicas{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 5%;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}  
+
+.modal-content {
+    background-color: #555555;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#filterForm {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+#filterForm input[type="number"],
+#filterForm select {
+    width: calc(100% - 40px); 
+    padding: 10px; 
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+#filterForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+#filterForm input[type="submit"]:hover {
+    background-color: #333; 
+}

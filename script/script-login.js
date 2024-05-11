@@ -11,6 +11,7 @@ function mudarForm(formId) {
     }
 }
 
+
 function validateSignInForm() {
     var email = document.getElementById('singin_email').value;
     var password = document.getElementById('singin_password').value;
@@ -23,34 +24,35 @@ function validateSignInForm() {
 
     var isValid = true;
 
-    if(email.trim() == ""){
-        emailerro.style.display='block';
-        emailField.style.border="solid 1px #ce8714";
-        emailField.style.background='#ce87144f';
-        isValid= false;
-    }else{
-        emailerro.style.display='none';
-        emailField.style.border="none";
-        emailField.style.background='rgba(107, 107, 107, 0.382)';
-        isValid= true;
+    if (email.trim() == "") {
+        emailerro.style.display = 'block';
+        emailField.style.border = "solid 1px #ce8714";
+        emailField.style.background = '#ce87144f';
+        isValid = false;
+    } else {
+        emailerro.style.display = 'none';
+        emailField.style.border = "none";
+        emailField.style.background = 'rgba(107, 107, 107, 0.382)';
+        isValid = true;
     }
 
-    if(password.trim() == ""){
-        passworderro.style.display='block';
-        passwordField.style.border="solid 1px #ce8714";
-        passwordField.style.background='#ce87144f';
-        isValid= false;
+    if (password.trim() == "") {
+        passworderro.style.display = 'block';
+        passwordField.style.border = "solid 1px #ce8714";
+        passwordField.style.background = '#ce87144f';
+        isValid = false;
     }
-    else{
-        passworderro.style.display='none';
-        passwordField.style.border="none";
-        passwordField.style.background='rgba(107, 107, 107, 0.382)';
-        isValid= true;
+    else {
+        passworderro.style.display = 'none';
+        passwordField.style.border = "none";
+        passwordField.style.background = 'rgba(107, 107, 107, 0.382)';
+        isValid = true;
     }
+    window.location.href = "perfil.html";
     return isValid;
 }
 
-function validateSignUpForm() {
+function vlidateSignUpForm() {
     var name = document.getElementById('singup_name').value;
     var email = document.getElementById('singup_email').value;
     var password = document.getElementById('singup_pass').value;
@@ -65,40 +67,54 @@ function validateSignUpForm() {
 
     var isValid = true;
 
-    if(name.trim() == ""){
-        nameerro.style.display='block';
-        nameField.style.border="solid 1px #ce8714";
-        nameField.style.background='#ce87144f';
-        isValid= false;
-    }else{
-        nameerro.style.display='none';
-        nameField.style.border="none";
-        nameField.style.background='rgba(107, 107, 107, 0.382)';
-        isValid= true;
+    if (name.trim() == "") {
+        nameerro.style.display = 'block';
+        nameField.style.border = "solid 1px #ce8714";
+        nameField.style.background = '#ce87144f';
+        isValid = false;
+    } else {
+        nameerro.style.display = 'none';
+        nameField.style.border = "none";
+        nameField.style.background = 'rgba(107, 107, 107, 0.382)';
+        isValid = true;
     }
 
-    if(email.trim() == ""){
-        emailerro.style.display='block';
-        emailField.style.border="solid 1px #ce8714";
-        emailField.style.background='#ce87144f';
-        isValid= false;
-    }else{
-        emailerro.style.display='none';
-        emailField.style.border="none";
-        emailField.style.background='rgba(107, 107, 107, 0.382)';
-        isValid= true;
+    if (email.trim() == "") {
+        emailerro.style.display = 'block';
+        emailField.style.border = "solid 1px #ce8714";
+        emailField.style.background = '#ce87144f';
+        isValid = false;
+    } else {
+        emailerro.style.display = 'none';
+        emailField.style.border = "none";
+        emailField.style.background = 'rgba(107, 107, 107, 0.382)';
+        isValid = true;
     }
 
-    if(password.trim() == ""){
-        passworderro.style.display='block';
-        passwordField.style.border="solid 1px #ce8714";
-        passwordField.style.background='#ce87144f';
-        isValid= false;
-    }else{
-        passworderro.style.display='none';
-        passwordField.style.border="none";
-        passwordField.style.background='rgba(107, 107, 107, 0.382)';
-        isValid= true;
+    if (password.trim() == "") {
+        passworderro.style.display = 'block';
+        passwordField.style.border = "solid 1px #ce8714";
+        passwordField.style.background = '#ce87144f';
+        isValid = false;
+    } else {
+        passworderro.style.display = 'none';
+        passwordField.style.border = "none";
+        passwordField.style.background = 'rgba(107, 107, 107, 0.382)';
+        isValid = true;
     }
+
     return isValid;
 }
+
+
+document.getElementById('form-sing-in').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Valida o formulário
+    var isValid = validateSignInForm();
+
+    // Se o formulário for válido, redireciona para outra página
+    if (isValid) {
+        window.location.href = "perfil.html";
+    }
+});
