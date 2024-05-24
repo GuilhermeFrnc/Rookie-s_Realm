@@ -108,12 +108,10 @@ function vlidateSignUpForm() {
 
 
 document.getElementById('form-sing-in').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+    event.preventDefault();
 
-    // Valida o formulário
     var isValid = validateSignInForm();
 
-    // Se o formulário for válido, redireciona para outra página
     if (isValid) {
         window.location.href = "perfil.html";
     }
