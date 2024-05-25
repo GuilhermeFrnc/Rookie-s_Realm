@@ -1,27 +1,27 @@
-main{
+main {
     width: 100%;
     height: 100vh;
 }
 
-.container{
+.container {
     margin-top: 50px;
     width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-#infPerfil{
+#infPerfil {
     width: 50%;
     border-right: 1px solid white;
 }
 
-h1{
+h1 {
     margin: 40px 0 0px 250px;
 }
 
 
-#box_img_name{
+#box_img_name {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -29,7 +29,7 @@ h1{
     width: 100%;
 }
 
-#img_perfil{
+#img_perfil {
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -37,18 +37,18 @@ h1{
     margin: 0%;
 }
 
-#img_perfil img{
+#img_perfil img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
 }
 
-#box_img_name h2{
+#box_img_name h2 {
     margin-left: 30px;
-    color:#b2dfb0;
+    color: #b2dfb0;
 }
 
-#editar{
+#editar {
     background-color: transparent;
     border: none;
     padding: 5px;
@@ -57,14 +57,14 @@ h1{
     margin-left: 7%;
 }
 
-#sair{
+#sair {
     color: red;
     background-color: transparent;
     margin: 0% 0 0 55%;
     border: none;
 }
 
-#box_descricao{
+#box_descricao {
     margin-top: 2%;
     border-radius: 5px;
     width: 70%;
@@ -76,26 +76,26 @@ h1{
 
 
 
-.ultima{
+.ultima {
     display: flex;
     align-items: center;
     padding: 10px 0 10px 0;
 }
 
 
-.box_img_ultima{
+.box_img_ultima {
     width: 150px;
     height: 100px;
     overflow: hidden;
 }
 
-.box_img_ultima img{
+.box_img_ultima img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
 }
 
-.ultima strong{
+.ultima strong {
     margin-left: 10px;
 }
 
@@ -103,23 +103,23 @@ h1{
 
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.836);
 }
 
 .modal-content {
     background: linear-gradient(rgba(60, 60, 60, 0.925), rgb(30, 30, 30));
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; 
+    width: 60%;
 }
 
 .close {
@@ -138,14 +138,67 @@ h1{
 }
 
 .modal input,
-.modal textarea{
+.modal textarea {
     border-radius: 10px;
     margin: 5px;
 }
 
-.modal button{
+.modal button {
     width: 15%;
-    margin-left:40% ;
+    margin-left: 40%;
     text-align: center;
     border-radius: 50px;
+}
+
+
+
+.avatar-options {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 0 20px 0;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0 5px;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }

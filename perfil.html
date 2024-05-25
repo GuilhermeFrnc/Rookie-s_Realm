@@ -35,7 +35,7 @@
                     <div id="img_perfil">
                         <img src="img/samurai.webp"  alt="">
                     </div>
-                    <h2>Nome</h2>
+                    <h2 id="box_name">Nome</h2>
                     <p>#001</p>
                 </div>
                 <button id="editar">Editar Perfil</button><br>
@@ -72,11 +72,19 @@
                 <h2>Editar Perfil</h2>
                 <input type="text" id="novo_nome" placeholder="Novo nome">
                 <textarea id="nova_descricao" placeholder="Nova descrição"></textarea>
-                <button id="fazer_alteracao">Fazer Alteração</button>
+                <h3>mudar avatar:</h3>
+                <div class="avatar-options">
+                    <img src="img/claiton.webp" alt="Avatar 1" class="avatar" data-avatar="avatar1.jpg">
+                    <img src="img/1326068.webp" alt="Avatar 2" class="avatar" data-avatar="avatar2.jpg">
+                    <img src="img/controles-wallpaper.jpg" alt="Avatar 2" class="avatar" data-avatar="avatar2.jpg">
+                    <img src="img/elden-ring.webp" alt="Avatar 4" class="avatar" data-avatar="avatar4.jpg">
+                </div>
+                <button id="fazer_alteracao">Alterar</button>
             </div>
-        </div>        
+        </div>      
     </main>
     <script src="script/script-perfil.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

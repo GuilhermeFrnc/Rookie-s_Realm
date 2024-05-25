@@ -113,7 +113,8 @@ main {
     display: block;
 }
 
-#news05, #news06 {
+#news05,
+#news06 {
     width: 645px;
 }
 
@@ -156,4 +157,8 @@ main {
 
 .games table tr td {
     padding: 5px;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
 }

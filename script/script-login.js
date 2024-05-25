@@ -11,48 +11,50 @@ function mudarForm(formId) {
     }
 }
 
+document.getElementById('form-sing-in').addEventListener('submit', function(event) {
+    event.preventDefault(); 
 
-function validateSignInForm() {
     var email = document.getElementById('singin_email').value;
     var password = document.getElementById('singin_password').value;
 
     var emailField = document.getElementById('singin_email');
     var passwordField = document.getElementById('singin_password');
 
-    var emailerro = document.getElementById('emailIn_erro');
-    var passworderro = document.getElementById('passIn_erro');
+    var emailErro = document.getElementById('emailIn_erro');
+    var passwordErro = document.getElementById('passIn_erro');
 
     var isValid = true;
 
-    if (email.trim() == "") {
-        emailerro.style.display = 'block';
+    if (email.trim() === "") {
+        emailErro.style.display = 'block';
         emailField.style.border = "solid 1px #ce8714";
         emailField.style.background = '#ce87144f';
         isValid = false;
     } else {
-        emailerro.style.display = 'none';
+        emailErro.style.display = 'none';
         emailField.style.border = "none";
         emailField.style.background = 'rgba(107, 107, 107, 0.382)';
-        isValid = true;
     }
 
-    if (password.trim() == "") {
-        passworderro.style.display = 'block';
+    if (password.trim() === "") {
+        passwordErro.style.display = 'block';
         passwordField.style.border = "solid 1px #ce8714";
         passwordField.style.background = '#ce87144f';
         isValid = false;
-    }
-    else {
-        passworderro.style.display = 'none';
+    } else {
+        passwordErro.style.display = 'none';
         passwordField.style.border = "none";
         passwordField.style.background = 'rgba(107, 107, 107, 0.382)';
-        isValid = true;
     }
-    window.location.href = "perfil.html";
-    return isValid;
-}
 
-function vlidateSignUpForm() {
+    if (isValid) {
+        window.location.href = "perfil.html";
+    }
+});
+
+document.getElementById('form-sing-up').addEventListener('submit', function(event) {
+    event.preventDefault();
+
     var name = document.getElementById('singup_name').value;
     var email = document.getElementById('singup_email').value;
     var password = document.getElementById('singup_pass').value;
@@ -61,58 +63,47 @@ function vlidateSignUpForm() {
     var emailField = document.getElementById('singup_email');
     var passwordField = document.getElementById('singup_pass');
 
-    var nameerro = document.getElementById('nameUp_erro');
-    var emailerro = document.getElementById('emailUp_erro');
-    var passworderro = document.getElementById('passUp_erro');
+    var nameErro = document.getElementById('nameUp_erro');
+    var emailErro = document.getElementById('emailUp_erro');
+    var passwordErro = document.getElementById('passUp_erro');
 
     var isValid = true;
 
-    if (name.trim() == "") {
-        nameerro.style.display = 'block';
+    if (name.trim() === "") {
+        nameErro.style.display = 'block';
         nameField.style.border = "solid 1px #ce8714";
         nameField.style.background = '#ce87144f';
         isValid = false;
     } else {
-        nameerro.style.display = 'none';
+        nameErro.style.display = 'none';
         nameField.style.border = "none";
         nameField.style.background = 'rgba(107, 107, 107, 0.382)';
-        isValid = true;
     }
 
-    if (email.trim() == "") {
-        emailerro.style.display = 'block';
+    if (email.trim() === "") {
+        emailErro.style.display = 'block';
         emailField.style.border = "solid 1px #ce8714";
         emailField.style.background = '#ce87144f';
         isValid = false;
     } else {
-        emailerro.style.display = 'none';
+        emailErro.style.display = 'none';
         emailField.style.border = "none";
         emailField.style.background = 'rgba(107, 107, 107, 0.382)';
-        isValid = true;
     }
 
-    if (password.trim() == "") {
-        passworderro.style.display = 'block';
+    if (password.trim() === "") {
+        passwordErro.style.display = 'block';
         passwordField.style.border = "solid 1px #ce8714";
         passwordField.style.background = '#ce87144f';
         isValid = false;
     } else {
-        passworderro.style.display = 'none';
+        passwordErro.style.display = 'none';
         passwordField.style.border = "none";
         passwordField.style.background = 'rgba(107, 107, 107, 0.382)';
-        isValid = true;
     }
 
-    return isValid;
-}
-
-
-document.getElementById('form-sing-in').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var isValid = validateSignInForm();
-
     if (isValid) {
+        localStorage.setItem("name", name)
         window.location.href = "perfil.html";
     }
 });

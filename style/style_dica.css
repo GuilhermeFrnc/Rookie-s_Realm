@@ -4,7 +4,7 @@ main{
     justify-content: space-around;
     padding: 0 5px;
     margin-top: 3%;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .box_dica{
@@ -74,3 +74,22 @@ main{
 #form_comentario input:hover{
     border: 2px solid #b2dfb0;
 }
+
+.star-rating {
+    font-size: 2em;
+    color: #ccc;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star.hover {
+    color: #ff0;
+}
+
+.star.selected {
+    color: #f39c12;
+}
+
+

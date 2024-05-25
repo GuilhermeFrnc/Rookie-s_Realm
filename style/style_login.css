@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#search-bar{
+#search-bar {
     margin-top: 20px;
 }
 
@@ -81,7 +81,7 @@ input {
     box-shadow: 0 0 10px 5px #b2dfb0;
 }
 
-#form-sing-up {
+#form-sing-in {
     display: none;
 }
 
