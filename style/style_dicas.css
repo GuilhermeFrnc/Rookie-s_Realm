@@ -117,60 +117,84 @@ footer{
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
-}  
+}
 
 .modal-content {
-    background-color: #555555;
+    background-color: #0b0b0bd8;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.721);
+    border-radius: 10px;
 }
 
 .close {
     color: #aaa;
+    float: right;
     font-size: 28px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
     font-weight: bold;
-    cursor: pointer;
+    text-align: end;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 5, 5);
     text-decoration: none;
     cursor: pointer;
 }
 
-
-#filterForm {
-    border-radius: 10px;
-    padding: 20px;
+.circle-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #000000;
 }
 
-
-#filterForm input[type="number"],
-#filterForm select {
-    width: calc(100% - 40px); 
-    padding: 10px; 
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    border: 1px solid #ccc;
-    box-sizing: border-box; 
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#filterForm input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #555;
-    color: #fff;
+.circle:hover {
+    background-color: #38cb30;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+.circle.selected {
+    background-color: #38cb30;
+    color: rgb(0, 0, 0);
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #b2dfb0;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
 }
 
-#filterForm input[type="submit"]:hover {
-    background-color: #333; 
+.filter-button:hover {
+    background-color: #38cb30;
+}
+
+#filterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 20px;
 }

@@ -224,32 +224,23 @@
             <span class="close">&times;</span>
             <form id="filterForm">
                 <label for="nota">Nota da postagem:</label>
-                <select id="nota" name="nota">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                <div class="circle-options" id="nota-options">
+                    <div class="circle" data-value="0">0</div>
+                    <div class="circle" data-value="1">1</div>
+                    <div class="circle" data-value="2">2</div>
+                    <div class="circle" data-value="3">3</div>
+                    <div class="circle" data-value="4">4</div>
+                    <div class="circle" data-value="5">5</div>
+                </div>
                 <br>
                 <label for="idade">Idade:</label>
-                <select id="idade" name="idade">
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">+18</option>
-                </select>
+                <div class="circle-options" id="idade-options">
+                    <div class="circle" data-value="5">3</div>
+                    <div class="circle" data-value="6">7</div>
+                    <div class="circle" data-value="7">12</div>
+                    <div class="circle" data-value="8">16</div>
+                    <div class="circle" data-value="9">18</div>
+                </div>
                 <br>
                 <label for="genero">Gênero do jogo:</label>
                 <select id="genero" name="genero">
@@ -260,7 +251,7 @@
                     <option value="simulacao">Simulação</option>
                 </select>
                 <br>
-                <input type="submit" value="Filtrar">
+                <input class="filter-button" type="submit" value="Filtrar">
             </form>
         </div>
     </div>
